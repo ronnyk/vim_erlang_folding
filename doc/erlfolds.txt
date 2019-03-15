@@ -39,10 +39,15 @@ Features ~
                                                                  *installation*
 Installation ~
 
+  Using Vundle, add this to your vimrc:
+    Plugin 'ronnyk/vim_erlang_folding'
+
+Install manually:
   1. Copy erlfolding.vim into ~/.vim/plugin
-  2. Added the following lines to ~/.vimrc
+  2. Add the following lines to ~/.vimrc
     set foldenable
     map <F5> <Esc>:EnableErlangFolds<Cr>
+
 
 
 ===============================================================================
