@@ -1,0 +1,54 @@
+*erlfolds.txt*	Vim Erlang Folding plugin
+
+===============================================================================
+Contents ~
+
+ 1. Origin                                                             |origin|
+ 2. Features                                                         |features|
+ 3. Installation                                                 |installation|
+ 4. How To Use                                                     |how-to-use|
+
+===============================================================================
+
+                                                                       *origin*
+Origin ~
+The plugin is a stripped down version of vimerl from
+http://github.com/jimenezrick/vimerl.
+
+===============================================================================
+                                                                     *features*
+Features ~
+  1. Upon folding a function, standard erlang documentation above each function
+     will be included in the fold. ie. Before folding
+
+          %% @spec hello_world(Text::string()) -> string()
+          %% @doc Send hello world text.
+          hello_world(Text) ->
+            "Hello " ++ Text.
+
+
+      ie. After folding
+
+          hello_world/1 (5 lines)--------------------
+
+
+  2. Folding takes into account of empty lines between functions.
+
+
+===============================================================================
+                                                                 *installation*
+Installation ~
+
+  1. Copy erlfolding.vim into ~/.vim/plugin
+  2. Added the following lines to ~/.vimrc
+    set foldenable
+    map <F5> <Esc>:EnableErlangFolds<Cr>
+
+
+===============================================================================
+                                                                   *how-to-use*
+How To Use ~
+
+  Upon opening up an erlang file. Press F5 to fold the code.
+
+vim: ft=help
